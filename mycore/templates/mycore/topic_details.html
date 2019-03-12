@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{% static "mycore/css/index.css" %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="topic-list__item">
+            <h4><a href="{% url "topic_details" 1 %}">Test</a></h4>
+            <h6>Категория: test</h6>
+            <p>Example text</p>
+            <a href="{% url "topic_details" 2 %}" class="btn btn-primary">More</a>
+        </div>
+    </div>
+{% endblock %}
